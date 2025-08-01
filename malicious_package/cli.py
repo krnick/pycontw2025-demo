@@ -5,7 +5,9 @@
 
 import subprocess
 
-print("--- from malicious_package/__init__.py ---")
-malicious_command = "echo 'The package was imported, and the code has run.' >> malware_from_import.txt"
-print(f"Executing malicious command: {malicious_command}")
-subprocess.run(malicious_command, shell=True, check=True)
+
+def run_malicious_command_line_tool():
+    print("--- from malicious_package/cli.py ---")
+    malicious_command = "echo 'The command line tool was executed.' >> malware_from_command_line.txt"
+    subprocess.run(malicious_command, shell=True, check=True)
+    print(f"Executing malicious command: {malicious_command}")
