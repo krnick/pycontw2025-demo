@@ -3,6 +3,8 @@
 # Talk URL: https://tw.pycon.org/2025/zh-hant/conference/talk/332
 # WARNING: The code is not malicious, but please do not run it in a production environment.
 
+__version__ = "0.0.1"
+
 import subprocess
 
 print("--- from malicious_package/__init__.py ---")

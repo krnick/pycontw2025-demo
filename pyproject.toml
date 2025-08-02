@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "malicious-package"
+dynamic = ["version"]
+description = "A seemingly harmless Python package."
+readme = "README.md"
+license = "MIT"
+
+[project.scripts]
+cli-tool = "malicious_package.cli:run_malicious_command_line_tool"
+
+[tool.hatch.version]
+path = "malicious_package/__init__.py"
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "/malicious_package",
+]
+
+[tool.hatch.build.targets.wheel.hooks.custom]
