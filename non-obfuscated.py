@@ -1,5 +1,5 @@
-import subprocess
 import os
+import subprocess
 
 curl_url = "curl https://tw.pycon.org/2025/zh-hant/conference/talk/332 > this_talk.html"
 
